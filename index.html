@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tita's FreshFold Laundry Shop - Fresh Clothes, Fresh Start</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <i class="fas fa-soap"></i>
+                <span>Tita's FreshFold</span>
+            </div>
+            <ul class="nav-menu" id="navMenu">
+                <li class="nav-item">
+                    <a href="#home" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#about" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#services" class="nav-link">Services</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#pricing" class="nav-link">Pricing</a>
+                </li>
+                <li class="nav-item">
+                    <a href="#contact" class="nav-link">Contact</a>
+                </li>
+            </ul>
+            <div class="hamburger" id="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <div class="hero-text">
+                <h1 class="hero-title">
+                    <span class="logo-icon"><i class="fas fa-soap"></i></span>
+                    Tita's FreshFold
+                </h1>
+                <p class="hero-tagline">Fresh clothes, fresh start</p>
+                <p class="hero-subtitle">Professional laundry services for your everyday needs</p>
+                <div class="hero-buttons">
+                    <button class="btn btn-primary" id="bookPickupBtn">
+                        <i class="fas fa-truck"></i> Book a Pickup
+                    </button>
+                    <button class="btn btn-secondary" id="viewServicesBtn">
+                        <i class="fas fa-eye"></i> View Services
+                    </button>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="washing-machine-icon">
+                    <i class="fas fa-washing-machine"></i>
+                </div>
+            </div>
+        </div>
+        <div class="hero-stats">
+            <div class="stat">
+                <h3 class="stat-number" data-target="500">0</h3>
+                <p class="stat-label">Happy Customers</p>
+            </div>
+            <div class="stat">
+                <h3 class="stat-number" data-target="10">0</h3>
+                <p class="stat-label">Years Experience</p>
+            </div>
+            <div class="stat">
+                <h3 class="stat-number" data-target="5000">0</h3>
+                <p class="stat-label">Loads Completed</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Us Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <h3>Your Trusted Laundry Partner</h3>
+                    <p>
+                        Welcome to Tita's FreshFold Laundry Shop, where we believe that clean clothes are a foundation for a fresh start. 
+                        With years of experience in professional laundry services, we've built our reputation on reliability, cleanliness, and affordable pricing.
+                    </p>
+                    <p>
+                        Our dedicated team uses modern equipment and premium detergents to ensure your clothes receive the care they deserve. 
+                        Whether you need quick laundry or comprehensive care, we're here to make your life easier.
+                    </p>
+                    <div class="about-features">
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Premium Quality Service</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Affordable Pricing</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Quick Turnaround</span>
+                        </div>
+                        <div class="feature">
+                            <i class="fas fa-check-circle"></i>
+                            <span>Convenient Pickup & Delivery</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="about-image">
+                    <div class="image-placeholder">
+                        <i class="fas fa-star"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Our Services</h2>
+            <p class="section-subtitle">Professional laundry solutions for every need</p>
+            
+            <div class="services-grid">
+                <!-- Wash Only Service -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-water"></i>
+                    </div>
+                    <h3>Wash Only</h3>
+                    <p class="service-description">
+                        Professional washing with premium detergent. Your clothes are cleaned with care.
+                    </p>
+                    <div class="service-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Premium detergent</li>
+                            <li><i class="fas fa-check"></i> Professional care</li>
+                            <li><i class="fas fa-check"></i> Max 8kg per load</li>
+                        </ul>
+                    </div>
+                    <div class="service-pricing">
+                        <span class="price">₱70</span>
+                        <span class="unit">per load</span>
+                    </div>
+                    <button class="btn btn-service" onclick="openBookingModal('Wash Only')">
+                        Select Service
+                    </button>
+                </div>
+
+                <!-- Dry Only Service -->
+                <div class="service-card">
+                    <div class="service-icon">
+                        <i class="fas fa-wind"></i>
+                    </div>
+                    <h3>Dry Only</h3>
+                    <p class="service-description">
+                        Expert drying to preserve fabric quality. Gentle heat for all clothing types.
+                    </p>
+                    <div class="service-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Fabric safe</li>
+                            <li><i class="fas fa-check"></i> Gentle heat</li>
+                            <li><i class="fas fa-check"></i> Quick drying</li>
+                        </ul>
+                    </div>
+                    <div class="service-pricing">
+                        <span class="price">₱80</span>
+                        <span class="unit">per load</span>
+                    </div>
+                    <button class="btn btn-service" onclick="openBookingModal('Dry Only')">
+                        Select Service
+                    </button>
+                </div>
+
+                <!-- Full Service -->
+                <div class="service-card featured">
+                    <div class="badge">POPULAR</div>
+                    <div class="service-icon">
+                        <i class="fas fa-check-double"></i>
+                    </div>
+                    <h3>Full Service</h3>
+                    <p class="service-description">
+                        Complete laundry care including wash, dry, fold, and pressing with premium products.
+                    </p>
+                    <div class="service-features">
+                        <ul>
+                            <li><i class="fas fa-check"></i> Wash & dry</li>
+                            <li><i class="fas fa-check"></i> Premium detergent</li>
+                            <li><i class="fas fa-check"></i> Fabcon softener</li>
+                            <li><i class="fas fa-check"></i> Neat folding</li>
+                        </ul>
+                    </div>
+                    <div class="service-pricing">
+                        <span class="price">₱200</span>
+                        <span class="unit">per load</span>
+                    </div>
+                    <button class="btn btn-service btn-primary" onclick="openBookingModal('Full Service')">
+                        Select Service
+                    </button>
+                </div>
+            </div>
+
+            <div class="service-info">
+                <div class="info-item">
+                    <i class="fas fa-weight"></i>
+                    <h4>Maximum Load Capacity</h4>
+                    <p>8kg per load for optimal cleaning results</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-clock"></i>
+                    <h4>Quick Turnaround</h4>
+                    <p>Same-day service available for urgent needs</p>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-truck-fast"></i>
+                    <h4>Pickup & Delivery</h4>
+                    <p>Convenient service right at your doorstep</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Us Section -->
+    <section class="why-choose-us">
+        <div class="container">
+            <h2 class="section-title">Why Choose Us</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-tag"></i>
+                    </div>
+                    <h3>Affordable Pricing</h3>
+                    <p>Competitive rates without compromising on quality. Perfect for all budgets.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-bolt"></i>
+                    </div>
+                    <h3>Fast Service</h3>
+                    <p>Quick turnaround times without sacrificing the quality of your clothes.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-sparkles"></i>
+                    </div>
+                    <h3>Fresh & Clean</h3>
+                    <p>Premium detergents and modern equipment ensure perfectly clean clothes.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-truck"></i>
+                    </div>
+                    <h3>Pickup & Delivery</h3>
+                    <p>Convenient service at your doorstep. Save time and effort with our delivery service.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-smile"></i>
+                    </div>
+                    <h3>Friendly Staff</h3>
+                    <p>Our team treats your clothes like their own. Exceptional customer service guaranteed.</p>
+                </div>
+
+                <div class="feature-item">
+                    <div class="feature-icon">
+                        <i class="fas fa-calendar-days"></i>
+                    </div>
+                    <h3>Open Everyday</h3>
+                    <p>Available seven days a week from 7 AM to 7 PM for your convenience.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Pricing Table</h2>
+            <p class="section-subtitle">Transparent and competitive pricing for all services</p>
+            
+            <div class="pricing-table-container">
+                <table class="pricing-table">
+                    <thead>
+                        <tr>
+                            <th>Service</th>
+                            <th>Price per Load</th>
+                            <th>Max Capacity</th>
+                            <th>What's Included</th>
+                            <th>Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Wash Only</strong></td>
+                            <td class="price-cell">₱70</td>
+                            <td>8kg</td>
+                            <td>Professional wash with premium detergent</td>
+                            <td>
+                                <button class="btn btn-small" onclick="openBookingModal('Wash Only')">
+                                    Book Now
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><strong>Dry Only</strong></td>
+                            <td class="price-cell">₱80</td>
+                            <td>8kg</td>
+                            <td>Expert drying with gentle heat</td>
+                            <td>
+                                <button class="btn btn-small" onclick="openBookingModal('Dry Only')">
+                                    Book Now
+                                </button>
+                            </td>
+                        </tr>
+                        <tr class="featured-row">
+                            <td><strong>Full Service</strong></td>
+                            <td class="price-cell featured-price">₱200</td>
+                            <td>8kg</td>
+                            <td>Wash, dry, fold + premium detergent & fabcon</td>
+                            <td>
+                                <button class="btn btn-small btn-primary" onclick="openBookingModal('Full Service')">
+                                    Book Now
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="additional-services">
+                <h3>Additional Services</h3>
+                <div class="additional-grid">
+                    <div class="additional-item">
+                        <i class="fas fa-truck-fast"></i>
+                        <h4>Pickup & Delivery</h4>
+                        <p>Available with minimal delivery fees</p>
+                    </div>
+                    <div class="additional-item">
+                        <i class="fas fa-box"></i>
+                        <h4>Bulk Services</h4>
+                        <p>Special rates for bulk and business laundry</p>
+                    </div>
+                    <div class="additional-item">
+                        <i class="fas fa-handshake"></i>
+                        <h4>Corporate Packages</h4>
+                        <p>Customized solutions for businesses</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+        <div class="container">
+            <h2 class="section-title">What Our Customers Say</h2>
+            <p class="section-subtitle">Real feedback from satisfied customers</p>
+            
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating">(5/5)</span>
+                    </div>
+                    <p class="testimonial-text">
+                        "Excellent service! My clothes came back looking brand new. The staff is very friendly and the prices are very reasonable. Highly recommended!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MC</div>
+                        <div class="author-info">
+                            <p class="author-name">Maria Cruz</p>
+                            <p class="author-date">1 month ago</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating">(5/5)</span>
+                    </div>
+                    <p class="testimonial-text">
+                        "The pickup and delivery service is amazing! It saves me so much time. The quality is consistent and professional. Best laundry service in town!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">JD</div>
+                        <div class="author-info">
+                            <p class="author-name">Juan Dela Cruz</p>
+                            <p class="author-date">2 weeks ago</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="testimonial-card">
+                    <div class="testimonial-header">
+                        <div class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                        <span class="rating">(5/5)</span>
+                    </div>
+                    <p class="testimonial-text">
+                        "Very professional and reliable. My family has been using their services for months. The full service option is worth every peso!"
+                    </p>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AG</div>
+                        <div class="author-info">
+                            <p class="author-name">Angela Garcia</p>
+                            <p class="author-date">3 weeks ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section class="faq" id="faq">
+        <div class="container">
+            <h2 class="section-title">Frequently Asked Questions</h2>
+            <p class="section-subtitle">Find answers to common questions about our services</p>
+            
+            <div class="faq-container">
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What is the maximum load capacity?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            The maximum load capacity is 8kg per load. This ensures optimal washing and drying results, 
+                            and guarantees that your clothes receive proper care and attention during the cleaning process.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you offer pickup and delivery?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Yes! We offer convenient pickup and delivery services. There may be minimal delivery fees depending 
+                            on your location. Contact us at 09997644838 or message us on Facebook for delivery availability in your area.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Are detergent and fabric conditioner included?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Premium detergent is included in all services. Fabcon (fabric conditioner/softener) is included in our 
+                            Full Service package. For Wash Only and Dry Only services, you can request additional fabcon for a small fee.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>What are your operating hours?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            We're open everyday from 7:00 AM to 7:00 PM. This includes weekdays, weekends, and holidays, 
+                            so you can bring your laundry whenever it's convenient for you. Pickup and delivery services are also available during these hours.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>How long does the full service take?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Our Full Service typically takes 24-48 hours depending on the volume. For urgent needs, 
+                            we offer same-day service upon request. Please call us to confirm same-day availability.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="faq-item">
+                    <div class="faq-question">
+                        <h3>Do you handle delicate fabrics?</h3>
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        <p>
+                            Yes, we handle all types of fabrics with care, including delicate items. Our experienced staff 
+                            uses appropriate washing and drying techniques for each fabric type. For special handling requests, 
+                            please inform us when you drop off or book your laundry.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <p class="section-subtitle">Have questions? We'd love to hear from you</p>
+            
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Call Us</h3>
+                            <a href="tel:09997644838">09997644838</a>
+                            <p>Available 7 AM - 7 PM, Everyday</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-facebook"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Facebook</h3>
+                            <a href="https://www.facebook.com/Tita's FreshFold" target="_blank">Tita's FreshFold</a>
+                            <p>Message us anytime for quick response</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Visit Us</h3>
+                            <p>Blk 84 Lot 28 Bulaon<br>City of San Fernando, Pampanga</p>
+                        </div>
+                    </div>
+
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Hours</h3>
+                            <p>Monday - Sunday<br>7:00 AM - 7:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-container">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone Number</label>
+                            <input type="tel" id="phone" name="phone" required>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="service">Service Needed</label>
+                            <select id="service" name="service" required>
+                                <option value="">Select a service</option>
+                                <option value="wash-only">Wash Only - ₱70</option>
+                                <option value="dry-only">Dry Only - ₱80</option>
+                                <option value="full-service">Full Service - ₱200</option>
+                                <option value="pickup-delivery">Pickup & Delivery</option>
+                                <option value="bulk-service">Bulk Service</option>
+                                <option value="inquiry">General Inquiry</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" rows="5" required></textarea>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Booking Modal -->
+    <div class="modal" id="bookingModal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Book Your Laundry Service</h2>
+                <button class="modal-close" onclick="closeBookingModal()">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            <form class="modal-form" id="bookingForm">
+                <div class="form-group">
+                    <label for="bookService">Service</label>
+                    <select id="bookService" required>
+                        <option value="Wash Only">Wash Only - ₱70</option>
+                        <option value="Dry Only">Dry Only - ₱80</option>
+                        <option value="Full Service">Full Service - ₱200</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="bookName">Full Name</label>
+                    <input type="text" id="bookName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bookPhone">Phone Number</label>
+                    <input type="tel" id="bookPhone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bookDate">Preferred Date</label>
+                    <input type="date" id="bookDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bookTime">Preferred Time</label>
+                    <input type="time" id="bookTime" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="bookDelivery">
+                        <input type="checkbox" id="bookDelivery">
+                        I need pickup and delivery service
+                    </label>
+                </div>
+
+                <div class="form-group">
+                    <label for="bookAddress">Delivery Address (if applicable)</label>
+                    <textarea id="bookAddress" rows="3"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="bookNotes">Special Instructions or Notes</label>
+                    <textarea id="bookNotes" rows="3" placeholder="Delicate items, specific instructions, etc."></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-full">Confirm Booking</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-actions">
+        <!-- Call Now Button -->
+        <a href="tel:09997644838" class="floating-btn call-btn" title="Call Us">
+            <i class="fas fa-phone"></i>
+        </a>
+
+        <!-- Facebook Messenger Button -->
+        <a href="https://www.facebook.com/Tita's FreshFold" target="_blank" class="floating-btn messenger-btn" title="Message on Facebook">
+            <i class="fab fa-facebook-messenger"></i>
+        </a>
+
+        <!-- Scroll to Top Button -->
+        <button class="floating-btn scroll-top-btn" id="scrollTopBtn" title="Scroll to Top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Tita's FreshFold</h3>
+                    <p>Fresh clothes, fresh start</p>
+                    <p>Professional laundry services for your everyday needs</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#home">Home</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Services</h4>
+                    <ul>
+                        <li><a href="#services">Wash Only</a></li>
+                        <li><a href="#services">Dry Only</a></li>
+                        <li><a href="#services">Full Service</a></li>
+                        <li><a href="#services">Pickup & Delivery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Contact Info</h4>
+                    <p><strong>Phone:</strong> <a href="tel:09997644838">09997644838</a></p>
+                    <p><strong>Address:</strong> Blk 84 Lot 28 Bulaon, City of San Fernando, Pampanga</p>
+                    <p><strong>Hours:</strong> 7 AM - 7 PM (Everyday)</p>
+                    <div class="social-links">
+                        <a href="https://www.facebook.com/Tita's FreshFold" target="_blank" title="Facebook">
+                            <i class="fab fa-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 Tita's FreshFold Laundry Shop. All rights reserved.</p>
+                <p>Fresh clothes, fresh start | Professional Laundry Services</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Loading Animation -->
+    <div class="loading" id="loading">
+        <div class="spinner"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
